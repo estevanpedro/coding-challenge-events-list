@@ -11,10 +11,10 @@ import {
 } from "../../Components/index"
 
 //** This component renders a list of all event */
-export default ({ readToRender, events }: PropsTypes) => {
+export default ({ readToRender, events, loadedAddress }: PropsTypes) => {
   return (
     <Container>
-      {readToRender === true ? (
+      {readToRender && loadedAddress ? (
         <ListItems>
           {events &&
             events.allEvents.map((event: EventType, index: number) => {
@@ -25,7 +25,14 @@ export default ({ readToRender, events }: PropsTypes) => {
                 return <ColonyRoleSetComponent event={event} key={index} />
               }
               if (event.parsed.name === "PayoutClaimed") {
-                return <PayoutClaimedComponent event={event} key={index} />
+                // console.log(event.userAddress)
+                return (
+                  <PayoutClaimedComponent
+                    event={event}
+                    userAddress={event.userAddress}
+                    key={index}
+                  />
+                )
               }
               if (event.parsed.name === "ColonyInitialised") {
                 return <ColonyInitialisedComponent event={event} key={index} />

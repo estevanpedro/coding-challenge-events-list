@@ -7,10 +7,19 @@
   font-family: "Mulish", sans-serif;
   max-width: 600px;
 }
+.primaryBold {
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Mulish", sans-serif;
+  max-width: 600px;
+}
 
 .secondary {
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 400;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

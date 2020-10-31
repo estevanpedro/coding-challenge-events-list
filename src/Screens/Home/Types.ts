@@ -1,9 +1,11 @@
 export interface PropsTypes {
   readToRender?: boolean
+  loadedAddress?: boolean
   events:
     | {
         allEvents: [
           {
+            userAddress?: string
             date: number
             raw: LogProps
             parsed:
@@ -17,6 +19,7 @@ export interface PropsTypes {
     | undefined
 }
 export interface EventType {
+  userAddress?: string
   date: number
   raw: LogProps
   parsed:
@@ -42,11 +45,11 @@ export interface hexType {
   _hex: string
 }
 
-export interface Values {
-  0: hexType
-  domainId: hexType
-  length: number
-}
+// export interface Values {
+//   0: hexType
+//   domainId: hexType
+//   length: number
+// }
 
 export interface DomainAddedTypes {
   name: string
@@ -91,13 +94,13 @@ export interface PayoutClaimedTypes {
   values: Values
 }
 
-export interface Values {
-  0: hexType
-  1: hexType
-  colonyNetwork: string
-  token: string
-  length: number
-}
+// export interface Values {
+//   0: hexType
+//   1: hexType
+//   colonyNetwork: string
+//   token: string
+//   length: number
+// }
 
 export interface ColonyInitialisedTypes {
   name: string

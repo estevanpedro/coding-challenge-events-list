@@ -26,8 +26,33 @@ const useInfura = () => {
     }
   }
 
+  const getAddressByTransactionHash = async (transactionHash: string) => {
+    try {
+      const response = await axios.post(
+        `${URL}`,
+        {
+          jsonrpc: "2.0",
+          method: "eth_getTransactionReceipt",
+          params: [transactionHash],
+          id: 1,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+      console.log("from: ", response.data.result.from)
+      console.log("to: ", response.data.result.to)
+      return response
+    } catch (err) {
+      return err
+    }
+  }
+
   return {
     getTimeByBlockHash,
+    getAddressByTransactionHash,
   }
 }
 export default useInfura
