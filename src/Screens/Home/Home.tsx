@@ -25,7 +25,6 @@ export default ({ readToRender, events, loadedAddress }: PropsTypes) => {
                 return <ColonyRoleSetComponent event={event} key={index} />
               }
               if (event.parsed.name === "PayoutClaimed") {
-                // console.log(event.userAddress)
                 return (
                   <PayoutClaimedComponent
                     event={event}

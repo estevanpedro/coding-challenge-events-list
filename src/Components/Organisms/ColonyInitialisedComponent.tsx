@@ -9,7 +9,7 @@ export default ({ event }: EventType | any) => {
       <Avatar randomString={event.raw.blockHash} />
       <Column>
         <Text>Congratulations! It's a beautiful baby colony!</Text>
-        <Text>{moment.unix(event.date).format("d MMM")}</Text>
+        <Text>{moment(event.date).format("D MMM")}</Text>
       </Column>
     </Item>
   )
