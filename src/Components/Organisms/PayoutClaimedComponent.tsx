@@ -24,7 +24,9 @@ export default ({ event, userAddress }: EventType | any) => {
           <Text className={"primaryBold"}>{token}</Text> payout from pot{" "}
           <Text className={"primaryBold"}>{fundingPotId}</Text>.
         </Text>
-        <Text>{moment(event.date).format("D MMM")}</Text>
+        <Text className={"secondary"}>
+          {moment(event.date).format("D MMM")}
+        </Text>
       </Column>
     </Item>
   )

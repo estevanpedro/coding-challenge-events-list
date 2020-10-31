@@ -13,7 +13,9 @@ export default ({ event }: EventType | any) => {
         <Text>
           Domain <Text className={"primaryBold"}>{domainId}</Text> added.
         </Text>
-        <Text>{moment(event.date).format("D MMM")}</Text>
+        <Text className={"secondary"}>
+          {moment(event.date).format("D MMM")}
+        </Text>
       </Column>
     </Item>
   )

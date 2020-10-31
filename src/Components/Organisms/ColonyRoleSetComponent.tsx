@@ -20,7 +20,9 @@ export default ({ event }: EventType | any) => {
           <Text className={"primaryBold"}>{event.parsed.values.user}</Text> in
           domain <Text className={"primaryBold"}>{domainId}</Text>
         </Text>
-        <Text>{moment(event.date).format("D MMM YYYY")}</Text>
+        <Text className={"secondary"}>
+          {moment(event.date).format("D MMM YYYY")}
+        </Text>
       </Column>
     </Item>
   )
