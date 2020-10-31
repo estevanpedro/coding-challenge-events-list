@@ -2,4 +2,6 @@
   width: 700px;
   align-items: center;
   box-shadow: 0 0 2em rgba(62, 118, 244, 0.14);
+  background-color: white;
+  border-radius: 6px;
 }

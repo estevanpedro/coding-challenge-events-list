@@ -1,6 +1,10 @@
 import React from "react"
 import "./styles.css"
 
-export default ({ children }: any) => {
+interface PropsTypes {
+  children?: React.ReactNode
+}
+
+export default ({ children }: PropsTypes) => {
   return <div className="listItems">{children}</div>
 }
