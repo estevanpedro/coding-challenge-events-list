@@ -1,0 +1,12 @@
+.item {
+  max-height: 90px;
+  padding: 26px 20px 26px 20px;
+  background-color: white;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  /* border: 1px solid green; */
+}
+div:hover {
+  background-color: gray;
+}
